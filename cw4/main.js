@@ -5,29 +5,28 @@ btn.addEventListener("click", async () => {
 });
 
 const getUser = async () => {
-  const data = await fetch(`https://jsonplaceholder.typicode.com/users/`);
+  const data = await fetch(`https://jsonplaceholder.typicode.com/users`);
   const user = await data.json();
   displayData(user);
 };
 
 const displayData = (data) => {
-  const mainPlace = document.getElementById("placeholder");
-  data.forEach((elem) => {
-    const values = Object.values(elem);
-    const placeholder = document.createElement("div");
-    placeholder.classList.add("user");
-    values.forEach((subElem) => {
-      if (!Object.is(subElem)) {
-        if (!Array.isArray(subElem)) {
-          console.log(subElem);
-          const subPlace = document.createElement("div");
-          const textNode = document.createTextNode(subElem);
-
-          subPlace.appendChild(textNode);
-          placeholder.appendChild(subPlace);
-        }
+  const mainPlaceholder = document.getElementById("placeholder");
+  while (mainPlaceholder.firstChild) {
+    mainPlaceholder.removeChild(mainPlaceholder.firstChild);
+  }
+  data.forEach((user) => {
+    const userValues = Object.values(user);
+    const userDiv = document.createElement("div");
+    userDiv.classList.add("user");
+    userValues.forEach((userValue) => {
+      if (typeof userValue !== "object") {
+        const userValueDiv = document.createElement("div");
+        const userValueData = document.createTextNode(userValue);
+        userValueDiv.appendChild(userValueData);
+        userDiv.appendChild(userValueDiv);
       }
     });
-    mainPlace.appendChild(placeholder);
+    mainPlaceholder.appendChild(userDiv);
   });
 };
