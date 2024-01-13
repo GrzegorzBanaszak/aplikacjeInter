@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadanie 3</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    main {
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 40% 60%;
+      grid-template-rows: 95% 5%;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin: 1rem 0;
+    }
+    ul {
+      list-style-type: decimal;
+      margin-left: 3rem;
+    }
+    .col-left {
+      background-color: red;
+      padding: 1rem 0;
+    }
+    h2 {
+      text-align: center;
+      font-size: 3rem;
+      margin: 2rem 0;
+    }
+    .col-right {
+      background-color: orange;
+    }
+    img {
+      width: 600px;
+      margin: 1rem;
+    }
+    .boxs {
+      display: flex;
+      gap: 0.5rem;
+      width: 400px;
+      height: 300px;
+    }
+    .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+      flex-grow: 1;
+    }
+    .box-no-border {
+      flex-grow: 1;
+      display: flex;
+      gap: 0.5rem;
+      flex-direction: column;
+    }
+    nav {
+      background-color: brown;
+      color: white;
+      display: flex;
+      font-size: 1.5rem;
+      align-items: center;
+      justify-content: right;
+      grid-column: 1 / span 2;
+    }
+  </style>
+  <body>
+    <main>
+      <div class="col-left">
+        <h2>Aktualności</h2>
+        <div class="title">Co Robimy?</div>
+        <ul>
+          <li>Pomagamy w nauce</li>
+          <li>Informujemy o prawach ucznia</li>
+          <li>Prowadzimy finanse klasy</li>
+        </ul>
+        <div class="title">Skład Rady</div>
+        <div class="boxs">
+          <div class="box">
+            Jan Abacki
+            <span>Przewodniczący</span>
+          </div>
+          <div class="box-no-border">
+            <div class="box">Anna Babacka</div>
+            <div class="box">Anna Cabacka</div>
+            <div class="box">Krzysztof Nowak</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-right">
+        <h2 class="">Nasza Klasa</h2>
+        <img src="schoolClass.png" alt="class" />
+      </div>
+      <nav>Autor strony : Jan Abacki</nav>
+    </main>
+  </body>
+</html>

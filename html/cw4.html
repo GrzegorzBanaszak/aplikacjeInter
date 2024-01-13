@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    form {
+      margin: 1rem;
+    }
+    .container {
+      border: 1px solid black;
+      position: relative;
+      max-width: 400px;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    .title {
+      position: absolute;
+      top: -10px;
+      left: 5px;
+      font-size: 1rem;
+      background-color: white;
+    }
+    .form-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0.5rem 0;
+    }
+    .form-box textarea {
+      height: 100px;
+    }
+  </style>
+  <body>
+    <form>
+      <div class="container">
+        <h1 class="title">Dane osobowe</h1>
+        <div class="form-box">
+          <label for="firstName">Imię:</label>
+          <input id="firstName" type="text" />
+        </div>
+        <div class="form-box">
+          <label for="lastName">Nazwisko:</label>
+          <input id="lastName" type="text" />
+        </div>
+        <div class="form-box">
+          <label for="dateOfBirth">Data urodzenia:</label>
+          <input id="dateOfBirth" type="text" placeholder="dd.mm.rrrr" />
+        </div>
+        <div class="form-box">
+          <label for="location">Miejsce urodzenia:</label>
+          <input id="location" type="text" />
+        </div>
+      </div>
+      <div class="container">
+        <h1 class="title">Pozostałe informacje</h1>
+        <div class="form-box">
+          <label>Wykształcenie:</label>
+          <div><input type="radio" />podstawowe</div>
+          <div><input type="radio" />średnie</div>
+          <div><input type="radio" />wyższe</div>
+        </div>
+        <div class="form-box">
+          <label for="location">Zawód wykonywany:</label>
+          <input id="location" type="text" />
+        </div>
+        <div class="form-box">
+          <label for="location">Dodatkowe umiejętności:</label>
+          <textarea></textarea>
+        </div>
+      </div>
+      <button type="submit">Wyślij</button>
+    </form>
+  </body>
+</html>

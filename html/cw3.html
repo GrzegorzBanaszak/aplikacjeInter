@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    table,
+    td {
+      border: 1px solid black;
+      text-align: center;
+    }
+    table {
+      width: 500px;
+    }
+    .table-body {
+      height: 300px;
+    }
+    .tb-1 {
+      width: 80%;
+      margin: 0 auto;
+    }
+  </style>
+  <body>
+    <div>
+      <table>
+        <tr>
+          <td colspan="3">Wpisz imie i nazwisko</td>
+        </tr>
+        <tr>
+          <td>Element 1.1</td>
+          <td>Element 1.2</td>
+          <td>Element 1.3</td>
+        </tr>
+        <tr>
+          <td colspan="3">Element 2.1 - 2.3</td>
+        </tr>
+        <tr class="table-body">
+          <td>
+            Element 3.1
+            <table class="tb-1">
+              <tr>
+                <td rowspan="2">4.1-5.1</td>
+                <td colspan="2">4.2 -4.3</td>
+              </tr>
+              <tr>
+                <td>5.2</td>
+                <td>5.3</td>
+              </tr>
+            </table>
+          </td>
+          <td>Element 3.2</td>
+          <td>
+            Element 3.3
+            <table class="tb-1">
+              <tr>
+                <td>A1</td>
+                <td>A2</td>
+                <td>A3</td>
+              </tr>
+              <tr>
+                <td>B1</td>
+                <td>B2</td>
+                <td>B3</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

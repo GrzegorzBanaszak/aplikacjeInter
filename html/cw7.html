@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    form {
+      background-color: #eee;
+      width: 600px;
+      height: 300px;
+    }
+    .container {
+      display: flex;
+      height: calc(100% - 20px);
+    }
+    .form-ele {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin: 0.7rem 0;
+    }
+    img {
+      height: 220px;
+      border: 3px solid #993399;
+    }
+    .col-left {
+      padding: 1rem;
+    }
+    .col-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+    }
+    button {
+      display: block;
+      margin: 0 0 0 auto;
+    }
+    .select-music {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .select-music input {
+      margin-right: 0.5rem;
+    }
+  </style>
+  <body>
+    <form>
+      <div class="container">
+        <section class="col-left">
+          <div class="form-ele">Podaj swoje imię: <input type="text" /></div>
+          <div class="form-ele">
+            Podaj swoje nazwisko: <input type="text" />
+          </div>
+          <div class="form-ele">Ile masz lat?: <input type="number" /></div>
+          <div class="form-ele">
+            Wybierz płęć
+            <div>
+              <label for="women"
+                ><input id="women" type="radio" name="gender" /> Kobieta</label
+              >
+              <label for="man"
+                ><input id="man" type="radio" name="gender" />
+                Męższczyzna</label
+              >
+            </div>
+          </div>
+          <div class="form-ele">
+            Jakiej muzyki słuchasz?
+            <div class="select-music">
+              <label for="opt-1"
+                ><input id="opt-1" type="checkbox" />Heavy Metal</label
+              >
+              <label for="opt-2"
+                ><input id="opt-2" type="checkbox" />Rock</label
+              >
+              <label for="opt-3"><input id="opt-3" type="checkbox" />Pop</label>
+              <label for="opt-4"
+                ><input id="opt-4" type="checkbox" />Techno</label
+              >
+            </div>
+          </div>
+        </section>
+        <section class="col-right">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1674343963928-d67007d2ae74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+            alt="Form flower"
+          />
+        </section>
+      </div>
+      <button>Wyślij</button>
+    </form>
+  </body>
+</html>

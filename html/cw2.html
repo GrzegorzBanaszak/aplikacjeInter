@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    ul {
+      list-style-type: none;
+    }
+    .box {
+      border: 1px solid black;
+    }
+    .container {
+      width: 100%;
+      height: 99vh;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 20% 60% 20%;
+      grid-template-areas: "navbar navbar navbar" "content content sidebar" "footer footer footer";
+      padding: 0.4rem;
+      gap: 0.3rem;
+      font-size: 1.3rem;
+    }
+    .navbar {
+      grid-area: navbar;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 2rem;
+    }
+    .content {
+      grid-area: content;
+      display: flex;
+      padding: 0.7rem;
+      gap: 1rem;
+    }
+    .content-links,
+    .content-main {
+      flex-grow: 1;
+      padding: 1rem;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      padding: 1rem;
+    }
+    .footer {
+      grid-area: footer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 2rem;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <nav class="box navbar">strona internetowa szkoły</nav>
+      <main class="box content">
+        <div class="box content-links">
+          <h2>Ważne Linki</h2>
+          <ul>
+            <li>www.men.gov.pl</li>
+            <li>www.ore.gov.pl</li>
+            <li>www.wsip.pl</li>
+            <li>www.dobraszkoła.pl</li>
+          </ul>
+        </div>
+        <div class="box content-main">
+          <h2>O Nas</h2>
+          <p>Nasza szkoła jest najlepsza,najładniejsza i najlepiej położona</p>
+        </div>
+      </main>
+      <aside class="box sidebar">
+        <h2>Menu</h2>
+        <ul>
+          <li>www.men.gov.pl</li>
+          <li>www.ore.gov.pl</li>
+          <li>www.wsip.pl</li>
+          <li>www.dobraszkoła.pl</li>
+        </ul>
+      </aside>
+      <footer class="box footer">
+        Strona zarządzana przez samorząd uczniowski
+      </footer>
+    </div>
+  </body>
+</html>

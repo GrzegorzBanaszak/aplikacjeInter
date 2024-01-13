@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background-color: #ccc;
+    }
+    .form-header {
+      text-align: center;
+      border: 2px solid green;
+      color: green;
+      text-shadow: 1px 1px 6px rgba(66, 68, 90, 1);
+    }
+    .form-container {
+      display: flex;
+      width: 60%;
+      flex-direction: column;
+      border: 3px solid black;
+      gap: 1rem;
+      background-color: white;
+      padding: 1rem;
+    }
+    .form-group {
+      width: 50%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      font-weight: 700;
+    }
+    .form-group input,
+    select {
+      background-color: rgb(95, 230, 95);
+      border: 1px solid gray;
+      color: gray;
+    }
+    .form-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+    .form-button {
+      padding: 1.5rem 2rem;
+      border-radius: 10px;
+      border: none;
+      color: white;
+      box-shadow: rgb(28, 177, 28) 0px 0px 8px 3px;
+      background-color: green;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <form class="form-container">
+        <h1 class="form-header">Ankieta dotycząca wyboru tematu kursu</h1>
+        <div class="form-group">Imię:<input required /></div>
+        <div class="form-group">Nazwisko:<input required /></div>
+        <div class="form-group">
+          Tytuł kursu:
+          <select>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">Javascript</option>
+          </select>
+        </div>
+        <div class="form-buttons">
+          <button class="form-button">Reset</button>
+          <button class="form-button" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

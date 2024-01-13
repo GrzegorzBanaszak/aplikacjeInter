@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+   
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    table,th,td {
+      border:2px solid gray;
+      border-spacing: 0;
+    }
+    
+    .container{
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+    .table-header{
+      background-color: orange;
+      color: white;
+      padding: 1rem 2rem;
+    }
+    .table-description{
+      background-color:rgb(221, 184, 114) ;
+    }
+    .table-description td{
+      padding:  0.4rem 0.7rem;
+    }
+    td{
+      padding: 0.6rem;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <table class="main-table">
+        <tr class="table-header">
+          <th class="table-header" colspan="5">Rozkład zajęć dodatkowych z informatyki</th>
+        </tr>
+        <tr class="table-description">
+          <td>rok szkolny</td>
+          <td>miesiąc</td>
+          <td>dzień</td>
+          <td>godzina</td>
+          <td>sala</td>
+        </tr>
+        <tr>
+          <td rowspan="3">rok szkolny</td>
+          <td>miesiąc</td>
+          <td>dzień</td>
+          <td>godzina</td>
+          <td rowspan="3">rok szkolny</td>
+        </tr>
+        <tr>
+          <td>miesiąc</td>
+          <td>dzień</td>
+          <td>godzina</td>
+        </tr>
+        <tr>
+          <td>miesiąc</td>
+          <td>dzień</td>
+          <td>godzina</td>
+        </tr>
+      </table>
+    </div>
+    
+  </body>
+</html>
